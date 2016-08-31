@@ -1,0 +1,3 @@
+<apex:page showHeader="false" standardStylesheets="false">
+    <apex:image url="{!$Resource.SalesforceLogo}"/>
+</apex:page>

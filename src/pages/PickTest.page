@@ -1,0 +1,29 @@
+<apex:page controller="SearchController">
+ <apex:form >
+ <script type="text/javascript">
+      function doSearch() {
+        searchServer(
+          document.getElementById("keyword").value,
+          );
+      }
+      </script>
+      <apex:actionFunction name="searchServer" action="{!resultSearch}" reRender="">
+      
+      <apex:param name="passKeyword" value="" />
+      </apex:actionFunction>
+ <input type="text" id="keyword" />
+ 
+ <table>
+ <tr>
+ <td>
+ Name : {!Name}
+ </td></tr>
+ <tr><td>Level : {!Level}</td></tr>
+ <tr><td>Sub-Level : {!SubLevel}</td>
+ </tr>
+ 
+ </table>
+ <apex:commandButton value="search" onclick="doSearch();" action="{!getresults}"/>
+ 
+ </apex:form>
+</apex:page>
