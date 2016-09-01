@@ -13,7 +13,7 @@ if (res.getStatusCode() == 200) {
 Map<String,Object> results = (Map<String,Object>)JSON.deserializeUntyped(res.getBody());
 animals = (Map<String,Object>)results.get('animal');
 }
-
+//checking the pull
 else{System.debug('The status code returned was not expected: ' + res.getStatusCode() + ' ' + res.getStatus());}
 
 return (string)animals.get('name');
