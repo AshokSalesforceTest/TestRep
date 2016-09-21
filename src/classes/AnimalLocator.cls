@@ -15,7 +15,7 @@ animals = (Map<String,Object>)results.get('animal');
 }
 //checking the pull
 else{System.debug('The status code returned was not expected: ' + res.getStatusCode() + ' ' + res.getStatus());}
-
+// This is my third commit.
 return (string)animals.get('name');
 }
 }
